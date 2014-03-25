@@ -6,6 +6,9 @@ This is a collection of files to use Vagrant and a bootstrap.sh script to start 
 
 If you make any improvements or bug fixes please feel free to contribute.
 
+See the following tutorial for more information:
+[http://www.websightdesigns.com/posts/view/how-to-configure-a-linux-web-server-vm-with-vagrant](http://www.websightdesigns.com/posts/view/how-to-configure-a-linux-web-server-vm-with-vagrant)
+
 # Requirements
 
 You'll need Vagrant and Virtualbox installed and sufficient disk space.
