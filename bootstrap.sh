@@ -6,6 +6,7 @@ MYSQLUSER=""
 MYSQLUSERPASSWORD=""
 MYSQLDBNAME=""
 PMAUSERPASSWORD=""
+PMABLOWFISHSECRET="kAHFetunscSBEGvgwkqwEdETWvjecbrgKKGYRBUYWEKJWCnkYWTGRR"
 
 sudo apt-get update 2> /dev/null
 
@@ -91,8 +92,7 @@ tar jxvf /vagrant/phpmyadmin/phpMyAdmin.tar.bz2 -C /vagrant/myadm.localhost --st
 rm -rf /vagrant/phpmyadmin 2> /dev/null
 
 # configure phpmyadmin
-mv /vagrant/myadm.localhost/config.sample.inc.php /vagrant/myadm.localhost/config.inc.php
-sed -i 's/kAHFetunscSBEGvgwkqwEdETWvjecbrgKKGYRBUYWEKJWCnkYWTGRR/' /vagrant/myadm.localhost/config.inc.php
+sed -i "s/IAidf85HCBEhbvqwbfvUIYREBCW927SWRHC35sUEYWRGt3/$PMABLOWFISHSECRET" /vagrant/conf/phpmyadmin.conf
 echo "CREATE DATABASE pma" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "CREATE USER 'pma'@'localhost' IDENTIFIED BY '$PMAUSERPASSWORD'" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "GRANT ALL ON pma.* TO 'pma'@'localhost'" | mysql -uroot -p$MYSQLROOTPASSWORD
