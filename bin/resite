@@ -1,0 +1,17 @@
+#!/bin/sh
+ 
+WEBROOT="/var/www/"
+VHOSTDIR="/etc/apache2/sites-available/"
+EXTENSION=""
+RESTARTCMD="/usr/bin/sudo service apache2 reload"
+ 
+if [ "$1" != '' ]; then
+  sudo a2dissite $1
+  sudo a2ensite $1
+  $RESTARTCMD
+  echo "reloaded $1"
+elif [ "$1" = 'help' ] || [ "$1" = '' ]; then
+  echo "usage:"
+  echo "sudo resite <hostname>"
+  echo "example: to reload hostname.localhost just run the command 'sudo resite hostname.localhost'"
+fi

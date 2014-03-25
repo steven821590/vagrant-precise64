@@ -1,0 +1,5 @@
+# bash aliases
+
+alias cdc='cd;clear'
+
+# eof
