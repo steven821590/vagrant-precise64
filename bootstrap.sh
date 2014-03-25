@@ -94,7 +94,7 @@ rm -rf /vagrant/phpmyadmin 2> /dev/null
 mv /vagrant/myadm.localhost/config.sample.inc.php /vagrant/myadm.localhost/config.inc.php
 sed -i 's/kAHFetunscSBEGvgwkqwEdETWvjecbrgKKGYRBUYWEKJWCnkYWTGRR/' /vagrant/myadm.localhost/config.inc.php
 echo "CREATE DATABASE pma" | mysql -uroot -p$MYSQLROOTPASSWORD
-echo "CREATE USER 'pma'@'localhost' IDENTIFIED BY 'PMAPASSWORD'" | mysql -uroot -p$MYSQLROOTPASSWORD
+echo "CREATE USER 'pma'@'localhost' IDENTIFIED BY '$PMAUSERPASSWORD'" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "GRANT ALL ON pma.* TO 'pma'@'localhost'" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "GRANT ALL ON phpmyadmin.* TO 'pma'@'localhost'" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "flush privileges" | mysql -uroot -p$MYSQLROOTPASSWORD
