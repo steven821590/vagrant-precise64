@@ -8,7 +8,7 @@ If you make any improvements or bug fixes please feel free to contribute.
 
 See the following tutorial for more information:
 
-[http://www.websightdesigns.com/posts/view/how-to-configure-a-linux-web-server-vm-with-vagrant](http://www.websightdesigns.com/posts/view/how-to-configure-a-linux-web-server-vm-with-vagrant)
+[http://www.websightdesigns.com/posts/view/how-to-configure-an-ubuntu-web-server-vm-with-vagrant](http://www.websightdesigns.com/posts/view/how-to-configure-an-ubuntu-web-server-vm-with-vagrant)
 
 # Requirements
 
